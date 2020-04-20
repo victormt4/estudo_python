@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
+
 # Classe abstrata
 class Conta(metaclass=ABCMeta):
 
