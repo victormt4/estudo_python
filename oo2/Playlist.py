@@ -46,6 +46,7 @@ class Serie(Programa):
         print(f'{self._nome} - {self.ano} - {self.__temporada} temporadas - {self._likes} Likes')
 
 
+# Classe abstrata Sized força a implementar métodos a fim de deixar o objeto iterável
 class Playlist(Sized):
     def __init__(self, nome, programas: List[Programa]):
         self.nome = nome
@@ -61,4 +62,5 @@ class Playlist(Sized):
 f = Filme('Vingadores', 2018, 200)
 s = Serie('Atlanta', 2017, 2)
 p = Playlist('Minha playlist', [f, s])
-print(len(p))
+
+print(s in p)
