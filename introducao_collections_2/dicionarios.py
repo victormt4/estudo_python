@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 d = {
     'Guilherme': 1,
@@ -30,10 +30,12 @@ for word in text.lower().split():
 print(word_count)
 
 # dicionário com valor default
-# int() = 0
-word_count = defaultdict(int)
+word_count = defaultdict(int)  # int() = 0
 
 for word in text.lower().split():
     word_count[word] += 1
 
+print(word_count)
+
+word_count = Counter(text.lower().split())
 print(word_count)
