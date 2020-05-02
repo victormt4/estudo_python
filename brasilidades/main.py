@@ -1,7 +1,8 @@
-from Cpf import Cpf
+from Model.Cpf import Cpf
+from Model.Cnpj import Cnpj
 
-valid_cpf = Cpf.generate_valid_cpf()
+pessoa_fisica = Cpf(Cpf.generate_valid_document())
+pessoa_juridica = Cnpj(Cnpj.generate_valid_document())
 
-cpf = Cpf(valid_cpf)
-
-print(cpf)
+print(pessoa_fisica)
+print(pessoa_juridica)
