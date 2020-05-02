@@ -1,6 +1,7 @@
 from Cpf import Cpf
 
+valid_cpf = Cpf.generate_valid_cpf()
 
-cpf = Cpf("05222853179")
+cpf = Cpf(valid_cpf)
 
 print(cpf)

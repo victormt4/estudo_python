@@ -19,3 +19,7 @@ class Cpf:
     def mask(self):
         # return f"{self.cpf[:3]}.{self.cpf[3:6]}.{self.cpf[6:9]}-{self.cpf[9:]}"
         return CPF().mask(self.cpf)
+
+    @staticmethod
+    def generate_valid_cpf(mask=False):
+        return CPF().generate(mask)
