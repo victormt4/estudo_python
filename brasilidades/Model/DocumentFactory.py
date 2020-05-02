@@ -10,7 +10,7 @@ class DocumentFactory:
     def create_pessoa(document) -> Document:
 
         document = str(document)
-        document = re.sub(r'[^0-9]', '', document)
+        document = re.sub(r'[^0-9]', '', document)  # Removendo tudo exceto números
 
         if len(document) == 11:
             return Cpf(document)
