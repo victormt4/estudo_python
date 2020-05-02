@@ -7,7 +7,7 @@ import re
 class DocumentFactory:
 
     @staticmethod
-    def create_pessoa(document) -> Document:
+    def create_pessoa(document) -> Document:  # Adicionando tipo do retorno do método
 
         document = str(document)
         document = re.sub(r'[^0-9]', '', document)  # Removendo tudo exceto números
