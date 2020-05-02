@@ -1,8 +1,11 @@
-from Model.Cpf import Cpf
-from Model.Cnpj import Cnpj
+from Model.PessoaFactory import PessoaFactory
 
-pessoa_fisica = Cpf(Cpf.generate_valid_document())
-pessoa_juridica = Cnpj(Cnpj.generate_valid_document())
+cpf = '368.528.530-04'
+cnpj = '38.487.180/1863-19'
 
-print(pessoa_fisica)
-print(pessoa_juridica)
+pessoas = [cpf, cnpj]
+
+for index, document in enumerate(pessoas):
+    pessoas[index] = PessoaFactory.create_pessoa(document)
+
+print(pessoas)
