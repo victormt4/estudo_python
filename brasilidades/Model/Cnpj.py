@@ -1,8 +1,8 @@
-from Model.Pessoa import Pessoa
+from Model.Document import Document
 from validate_docbr import CNPJ
 
 
-class Cnpj(Pessoa):
+class Cnpj(Document):
 
     def is_valid(self, document):
         return CNPJ().validate(document)

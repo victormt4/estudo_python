@@ -1,8 +1,8 @@
-from Model.Pessoa import Pessoa
+from Model.Document import Document
 from validate_docbr import CPF
 
 
-class Cpf(Pessoa):
+class Cpf(Document):
 
     def is_valid(self, document):
         return CPF().validate(document)

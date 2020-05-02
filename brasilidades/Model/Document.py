@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Pessoa(ABC):
+class Document(ABC):
 
     def __init__(self, document):
 

@@ -1,13 +1,13 @@
 from Model.Cnpj import Cnpj
 from Model.Cpf import Cpf
-from Model.Pessoa import Pessoa
+from Model.Document import Document
 import re
 
 
-class PessoaFactory:
+class DocumentFactory:
 
     @staticmethod
-    def create_pessoa(document) -> Pessoa:
+    def create_pessoa(document) -> Document:
 
         document = str(document)
         document = re.sub(r'[^0-9]', '', document)
