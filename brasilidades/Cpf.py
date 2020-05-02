@@ -1,3 +1,6 @@
+from validate_docbr import CPF
+
+
 class Cpf:
     def __init__(self, document):
         document = str(document)
@@ -11,7 +14,8 @@ class Cpf:
 
     @staticmethod
     def is_cpf_valid(document):
-        return len(document) == 11
+        return CPF().validate(document)
 
     def mask(self):
-        return f"{self.cpf[:3]}.{self.cpf[3:6]}.{self.cpf[6:9]}-{self.cpf[9:]}"
+        # return f"{self.cpf[:3]}.{self.cpf[3:6]}.{self.cpf[6:9]}-{self.cpf[9:]}"
+        return CPF().mask(self.cpf)
