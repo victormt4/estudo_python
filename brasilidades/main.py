@@ -19,5 +19,6 @@ print(p)
 
 br_date = Date()
 
+print(br_date)
 print(br_date.month())
 print(br_date.weekday())

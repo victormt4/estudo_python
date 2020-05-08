@@ -6,7 +6,10 @@ class Date:
         self.__date = datetime.today()
 
     def __str__(self):
-        return self.__date.__str__()
+        return self.mask()
+
+    def mask(self):
+        return self.__date.strftime('%d/%m/%Y %H:%M')
 
     def month(self):
         months = (
