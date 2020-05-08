@@ -1,6 +1,7 @@
 from Model.DocumentFactory import DocumentFactory
 from Model.Phone import Phone
 from Model.Date import Date
+from datetime import datetime, timedelta
 
 cpf = '368.528.530-04'
 cnpj = '38.487.180/1863-19'
@@ -17,8 +18,9 @@ p = Phone('05562982120751')
 
 print(p)
 
-br_date = Date()
+br_date = Date(datetime.today() - timedelta(days=365))
 
 print(br_date)
 print(br_date.month())
 print(br_date.weekday())
+print(br_date.age())

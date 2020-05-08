@@ -2,8 +2,8 @@ from datetime import datetime
 
 
 class Date:
-    def __init__(self):
-        self.__date = datetime.today()
+    def __init__(self, date=datetime.today()):
+        self.__date = date
 
     def __str__(self):
         return self.mask()
@@ -21,3 +21,7 @@ class Date:
     def weekday(self):
         days = ('segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo')
         return days[self.__date.weekday()]
+
+    def age(self):
+        return datetime.today() - self.__date
+
