@@ -1,6 +1,7 @@
 from Model.DocumentFactory import DocumentFactory
 from Model.Phone import Phone
 from Model.Date import Date
+from Model.Address import Address
 from datetime import datetime, timedelta
 
 cpf = '368.528.530-04'
@@ -24,3 +25,6 @@ print(br_date)
 print(br_date.month())
 print(br_date.weekday())
 print(br_date.age())
+
+address = Address(88554481)
+print(address)
