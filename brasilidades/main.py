@@ -3,6 +3,7 @@ from Model.Phone import Phone
 from Model.Date import Date
 from Model.Address import Address
 from datetime import datetime, timedelta
+import requests
 
 cpf = '368.528.530-04'
 cnpj = '38.487.180/1863-19'
@@ -26,5 +27,5 @@ print(br_date.month())
 print(br_date.weekday())
 print(br_date.age())
 
-address = Address(88554481)
+address = Address('01001000')
 print(address)
